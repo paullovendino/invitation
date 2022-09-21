@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI CRUSH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <p id ="question">Hello, kain tayo sa labas?</p>
+            <button class="btn1" id="yes">Tara</button>
+            <button class="btn2" id="bawal">Ayoko nga</button> 
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const noBtn = document.getElementById('bawal');
+    const yesBtn = document.getElementById('yes');
+    const ques = document.getElementById('question');
+    noBtn.addEventListener("click", ()=>{
+        let rand = Math.floor(Math.random() * (100 - 50) + 1);
+        let rand2 = Math.floor(Math.random() * (-100 - 50) + 1);
+        noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+    });
+    yesBtn.addEventListener("click", ()=>{
+        ques.innerHTML = "Yownn, tra sa sunday HAHAHAHA"
+    })
+</script>
+</html>
